@@ -24,33 +24,50 @@ function isEmailValid(email) {
   return re.test(String(email).toLowerCase())
 }
 
+// Check required fields
+function checkRequired(inputArr) {
+  inputArr.forEach(function (input) {
+    if (input.value.trim() === '') {
+      showError(input, `${getFieldName(input)} is required`)
+    } else {
+      showSuccess(input)
+    }
+  })
+}
+
+function checkLength(input, min, max) {
+  if (input.value.length < min) {
+    showError(
+      input,
+      `${getFieldName(input)} must be greater than ${min} characters`
+    )
+  } else if (input.value.length > max) {
+    showError(
+      input,
+      `${getFieldName(input)} must be less than ${max} characters`
+    )
+  } else {
+    showSuccess(input)
+  }
+}
+
+// check passwords match
+function checkPasswordsMatch(input1, input2) {
+  if (input1.value !== input2.value) {
+    showError(input2, `Passwords do not match`)
+  }
+}
+
+function getFieldName(input) {
+  // capitalise the first letter of field IDs
+  return input.id.charAt(0).toUpperCase() + input.id.slice(1)
+}
+
 // Event Listeners
 form.addEventListener('submit', e => {
   e.preventDefault()
-
-  if (username.value === '') {
-    showError(username, 'Username is required')
-  } else {
-    showSuccess(username)
-  }
-
-  if (email.value === '') {
-    showError(email, 'Email is required')
-  } else if (!isEmailValid(email.value)) {
-    showError(email, 'Email is invalid')
-  } else {
-    showSuccess(email)
-  }
-
-  if (password.value === '') {
-    showError(password, 'Password is required')
-  } else {
-    showSuccess(password)
-  }
-
-  if (password2.value === '') {
-    showError(password2, 'Passwords do not match')
-  } else {
-    showSuccess(password2)
-  }
+  checkRequired([username, email, password, password2])
+  checkLength(username, 5, 15)
+  checkLength(password, 6, 20)
+  checkPasswordsMatch(password, password2)
 })
