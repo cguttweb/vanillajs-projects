@@ -1,0 +1,75 @@
+/* find a font */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  max-height: 100vh;
+}
+
+h1 {
+  color: #fff;
+}
+
+.screen {
+  background-color: #000;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  cursor: pointer;
+  width: 50%;
+}
+
+.controls {
+  align-items: center;
+  background: #555;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 50%;
+}
+
+.controls .btn {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.controls .fa-play {
+  color: #008880;
+}
+
+.controls .fa-stop {
+  color: #c00;
+}
+
+.controls .fa-pause {
+  color: #fff;
+}
+
+.controls .timestamp {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+@media (max-width: 800px) {
+  .screen,
+  .controls {
+    width: 95%;
+  }
+}
