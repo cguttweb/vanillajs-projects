@@ -1,0 +1,67 @@
+:root {
+  --main-color: #1f2196;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background-color: #f3f3f3;
+  color: var(--main-color);
+  display: flex;
+  font-family: Arial, sans-serif;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.btn {
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.currency {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.currency select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  background-image: url();
+  background-position: right 10px top 50%, 0, 0;
+  background-repeat: no-repeat;
+  background-size: 12px auto, 100%;
+  border: 1px solid #dedede;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.currency input {
+  border: 0;
+  font-size: 28px;
+  text-align: right;
+}
+
+.swap-rate-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rate {
+  color: var(--main-color);
+  font-size: 18px;
+  padding: 0 10px;
+}
