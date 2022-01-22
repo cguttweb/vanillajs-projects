@@ -6,3 +6,4 @@ A series of small projects from [udemy course](https://www.udemy.com/course/web-
 - [Movie Seat Booking](./movie-seat-booking)
 - [Custom Video Player](./video-player)
 - [New Year Countdown](./new-year-countdown)
+- [Relaxing App](./relaxing-app)
