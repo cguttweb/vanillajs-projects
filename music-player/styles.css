@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(0deg,
+  rgba(247, 247, 247, 1) 24%,
+  rgba(252, 221, 221, 1) 92%);
+
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
