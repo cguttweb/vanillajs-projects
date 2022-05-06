@@ -7,3 +7,5 @@ A series of small projects from [udemy course](https://www.udemy.com/course/web-
 - [Custom Video Player](./video-player)
 - [New Year Countdown](./new-year-countdown)
 - [Relaxing App](./relaxing-app)
+- [Music Player](./music-player)
+- [Infinite Scroll](./infinite-scroll-posts)
