@@ -10,3 +10,4 @@ A series of small projects from [udemy course](https://www.udemy.com/course/web-
 - [Music Player](./music-player)
 - [Infinite Scroll](./infinite-scroll-posts)
 - [Menu Slider and Modal](./menu-slider-and-modal/)
+- [Typing Game](/typing-game/)
