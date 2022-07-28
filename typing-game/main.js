@@ -39,6 +39,20 @@ let myScore = 0
 
 let time = 10
 
+let setDifficulty =
+  localStorage.getItem('difficulty') != null
+    ? localStorage.getItem('difficulty')
+    : 'medium'
+
+// Set difficulty select value
+difficulty.value =
+  localStorage.getItem('difficulty') != null
+    ? localStorage.getItem('difficulty')
+    : 'medium'
+
+// Focus text at start
+text.focus()
+
 const timeInterval = setInterval(updateTime, 500)
 
 function getRandomWord() {
@@ -89,8 +103,23 @@ text.addEventListener('input', e => {
     // clear input
     e.target.value = ''
 
+    if (difficulty === 'hard') {
+      time += 2
+    } else if (difficulty === 'medium') {
+      time += 3
+    }
     time += 5
 
     updateTime()
   }
+})
+
+settingsBtn.addEventListener('click', () => {
+  settings.classList.toggle('hide')
+})
+
+settingsForm.addEventListener('change', e => {
+  setDifficulty = e.target.value
+  console.log(setDifficulty)
+  localStorage.setItem('difficulty', difficulty)
 })
